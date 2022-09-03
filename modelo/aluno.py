@@ -13,3 +13,13 @@ class Aluno:
 
     def cadastrar(self):
         self.dmodule.cadastrar_aluno()
+
+    def buscar(self):
+        new_aluno = self.dmodule.buscar_aluno()
+        self.matricula = new_aluno.matricula
+        self.nome = new_aluno.nome
+        self.idade = new_aluno.idade
+        self.genero = new_aluno.genero
+        self.email = new_aluno.email
+        self.celular = new_aluno.celular
+        self.descricao = new_aluno.descricao
