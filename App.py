@@ -24,7 +24,8 @@ def menu_cadastro():
             genero = st.text_input('Diga o gênero que se identifica')
     descricao = st.text_area('Descreva-se em um tweet', max_chars=280)
     if st.button('Cadastrar'):
-        aluno = Aluno(nome, idade, genero, email, celular, matricula, descricao)
+        aluno = Aluno(matricula, nome, idade, genero, email, celular, descricao)
+        aluno.cadastrar()
         dados = [nome, idade, email, celular, matricula, genero, descricao]
         for x in dados:
             print(x)
